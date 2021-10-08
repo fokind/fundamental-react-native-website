@@ -1,0 +1,33 @@
+---
+id: button
+title: Button
+---
+
+```jsx
+import { Button } from "fundamental-react-native";
+```
+
+A **Button** allows users to perform an action. The priority of buttons within a page should be considered. For instance, only use the main button once within a page or dialog. Color is also important. For instance, the most important button has a blue background where as a red button should only be used if the action it performs is potentially destructive.
+
+## Examples
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { Button, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#F5FCFF',
+    }}>
+      <Button>Press me</Button>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```

@@ -4,32 +4,57 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Description
+
+The `fundamental-react-native` library is a set of **React Native** components based on **SAP Fundamental Styles**.
+
+## API Reference
+
+See Component Documentation for examples and API details.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+### Install
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+For an existing react application, install `fundamental-react-native`:
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
+```sh
+npm install fundamental-react-native
 ```
 
-## Start your site
+This project does not contain fonts and icons - they must be added to your project separately. Download **Font 72** and add fonts to your project.
 
-Run the development server:
+### Usage
+React Native Fundamental uses a centralized theme to provide consistency across all the components.
 
-```shell
-cd my-website
+#### Step 1. Import ThemeProvider and theme then wrap your root component.
 
-npx docusaurus start
+This step is important. We are passing `theme` as context value that each component will access.
+
+```jsx
+//your root component
+import { ThemeProvider, theme } from 'fundamental-react-native';
+
+function App() {
+  return (
+    <ThemeProvider value={theme}>
+      <Root />
+    </ThemeProvider>
+  );
+}
 ```
 
-Your site starts at `http://localhost:3000`.
+#### Step 2. Use component.
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+```jsx
+//inside any file
+import { Button } from 'fundamental-react-native';
+
+function HomeScreen() {
+  return (
+    <Button>
+      Press Me
+    </Button>
+  );
+}
+```
