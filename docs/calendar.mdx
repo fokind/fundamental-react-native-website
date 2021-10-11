@@ -1,0 +1,34 @@
+---
+id: calendar
+title: Calendar
+---
+
+```jsx
+import { Calendar } from "fundamental-react-native";
+```
+
+A **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**. It is rarely used on its own as a standalone component. Internally it uses and accepts [Moment.js](https://momentjs.com/) date objects.
+
+## Examples
+
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { Calendar, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Calendar />
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```

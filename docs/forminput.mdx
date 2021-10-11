@@ -1,0 +1,34 @@
+---
+id: forminput
+title: FormInput
+---
+
+```jsx
+import { FormInput } from "fundamental-react-native";
+```
+
+A **FormInput** is used to collect data from the user. When a field is required, the \`required\` property will include an asterisk (\*).
+
+## Examples
+
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { FormInput, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <FormInput placeholder="Field placeholder text" />
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```

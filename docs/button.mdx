@@ -11,6 +11,119 @@ A **Button** allows users to perform an action. The priority of buttons within a
 
 ## Examples
 
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Button, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Button>Press me</Button>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Options
+
+There are three emphasis styles used to indicate the importance of the button on the page.
+
+- **Emphasized Button**: There should only be one highlighted button on the page. This is the primary call to action.
+- **Regular Button**: The default button style and the most common button. There may be more than one on a page.
+- **Transparent Button**: This is the lowest priority button and most often used with page content like appearing in a table or list. There may be more than one on the page.
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Button, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Button style={{ margin: 4 }} option="emphasized">Emphasized Button</Button>
+      <Button style={{ margin: 4 }}>Regular Button</Button>
+      <Button style={{ margin: 4 }} option="transparent">Transparent Button</Button>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Types
+
+There are three emphasis styles used to indicate the importance of the button on the page.
+
+- **Standard Button**: Neutral or informative color.
+- **Positive Button**: Used for positive actions such as approved, ok, yes.
+- **Negative Button**: Used for negative actions such as decline, cancel, no.
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Button, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Button style={{ margin: 4 }}>Standard Button</Button>
+      <Button style={{ margin: 4 }} type="positive">Positive Button</Button>
+      <Button style={{ margin: 4 }} type="negative">Negative Button</Button>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### States
+
+There are three states: default, selected, and disabled.
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Button, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Button style={{ margin: 4 }}>Default</Button>
+      <Button style={{ margin: 4 }} selected>Selected</Button>
+      <Button style={{ margin: 4 }} disabled>Disabled</Button>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Icons
+
+Button can have an icon with text or just an icon.
+
+
 ```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
 import React from 'react';
 import { View } from 'react-native';
@@ -22,9 +135,15 @@ const App = () => (
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#F5FCFF',
     }}>
-      <Button>Press me</Button>
+      <Button style={{ margin: 4 }}
+        iconSet="FontAwesome"
+        glyph="shopping-cart">
+        Add to cart
+      </Button>
+      <Button style={{ margin: 4 }}
+        iconSet="FontAwesome"
+        glyph="shopping-cart" />
     </View>
   </ThemeProvider>
 );

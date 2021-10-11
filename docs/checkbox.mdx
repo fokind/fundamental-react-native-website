@@ -1,0 +1,80 @@
+---
+id: checkbox
+title: CheckBox
+---
+
+```jsx
+import { CheckBox } from "fundamental-react-native";
+```
+
+With a **CheckBox**, all options are visible and the user can make one or more selections. This component can also be disabled and displayed in a row
+
+## Examples
+
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { CheckBox, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <CheckBox>Default Checkbox</CheckBox>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Default Checked
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { CheckBox, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <CheckBox checked>Text Option</CheckBox>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Validation States
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { CheckBox, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+    }}>
+      <CheckBox validationState="error">Error State</CheckBox>
+      <CheckBox validationState="warning">Warning State</CheckBox>
+      <CheckBox validationState="information">Information State</CheckBox>
+      <CheckBox validationState="success">Success State</CheckBox>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```

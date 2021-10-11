@@ -1,0 +1,70 @@
+---
+id: inputgroup
+title: InputGroup
+---
+
+```jsx
+import { InputGroup } from "fundamental-react-native";
+```
+
+An **InputGroup** includes form inputs with other children that allow the user to better understand the information being entered.
+
+## Examples
+
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Button, FormInput, InputGroup, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <InputGroup>
+        <Button iconSet="FontAwesome" glyph="chevron-down" />
+        <FormInput />
+      </InputGroup>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Button child
+
+The **InputGroup** children supports buttons by providing the correct styling. Buttons can be shown with a text label or icon.
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Button, FormInput, InputGroup, Stack, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Stack>
+        <InputGroup>
+          <Button iconSet="FontAwesome" glyph="chevron-down" />
+          <FormInput />
+        </InputGroup>
+        <InputGroup>
+          <FormInput />
+          <Button iconSet="FontAwesome" glyph="chevron-down" />
+        </InputGroup>
+      </Stack>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```

@@ -1,0 +1,59 @@
+---
+id: counter
+title: Counter
+---
+
+```jsx
+import { Counter } from "fundamental-react-native";
+```
+
+Status Indicators are used to easily highlight the state of an object.
+
+## Examples
+
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Counter, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Counter>5</Counter>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Default Counter
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Counter, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Counter style={{ margin: 4 }}>5</Counter>
+      <Counter style={{ margin: 4 }}>25</Counter>
+      <Counter style={{ margin: 4 }}>101</Counter>
+      <Counter style={{ margin: 4 }}>999+</Counter>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```

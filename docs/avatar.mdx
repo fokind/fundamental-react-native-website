@@ -1,0 +1,178 @@
+---
+id: avatar
+title: Avatar
+---
+
+```jsx
+import { Avatar } from "fundamental-react-native";
+```
+
+An **Avatar** is a visual presentation option around using an icon or user initials.
+
+## Examples
+
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { Avatar, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Avatar iconSet="FontAwesome" glyph="user" size="m" />
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Sizes
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { Avatar, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Avatar style={{ margin: 4 }} iconSet="FontAwesome" glyph="user" size="xl" />
+      <Avatar style={{ margin: 4 }} iconSet="FontAwesome" glyph="user" size="l" />
+      <Avatar style={{ margin: 4 }} iconSet="FontAwesome" glyph="user" size="m" />
+      <Avatar style={{ margin: 4 }} iconSet="FontAwesome" glyph="user" size="s" />
+      <Avatar style={{ margin: 4 }} iconSet="FontAwesome" glyph="user" size="xs" />
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Initials
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Avatar, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Avatar style={{ margin: 4 }} size="xl">WW</Avatar>
+      <Avatar style={{ margin: 4 }} size="l">WW</Avatar>
+      <Avatar style={{ margin: 4 }} size="m">WW</Avatar>
+      <Avatar style={{ margin: 4 }} size="s">WW</Avatar>
+      <Avatar style={{ margin: 4 }} size="xs">WW</Avatar>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Circle
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { Avatar, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Avatar style={{ margin: 4 }} circle iconSet="FontAwesome" glyph="user" size="xl" />
+      <Avatar style={{ margin: 4 }} circle iconSet="FontAwesome" glyph="user" size="l" />
+      <Avatar style={{ margin: 4 }} circle iconSet="FontAwesome" glyph="user" size="m" />
+      <Avatar style={{ margin: 4 }} circle iconSet="FontAwesome" glyph="user" size="s" />
+      <Avatar style={{ margin: 4 }} circle iconSet="FontAwesome" glyph="user" size="xs" />
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Background Image
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { Avatar, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Avatar style={{ margin: 4 }}
+        circle
+        backgroundImageUrl="https://www.github.com/fokind.png"
+        size="xl" />
+      <Avatar style={{ margin: 4 }}
+        circle
+        backgroundImageUrl="https://www.github.com/fokind.png"
+        size="l" />
+      <Avatar style={{ margin: 4 }}
+        circle
+        backgroundImageUrl="https://www.github.com/fokind.png"
+        size="m" />
+      <Avatar style={{ margin: 4 }}
+        circle
+        backgroundImageUrl="https://www.github.com/fokind.png"
+        size="s" />
+      <Avatar style={{ margin: 4 }}
+        circle
+        backgroundImageUrl="https://www.github.com/fokind.png"
+        size="xs" />
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Transparent
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3,@expo/vector-icons
+import React from 'react';
+import { View } from 'react-native';
+import { Avatar, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <Avatar style={{ margin: 4 }} size="m" transparent>
+        WW
+      </Avatar>
+      <Avatar style={{ margin: 4 }} iconSet="FontAwesome" glyph="user" size="m" transparent />
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```

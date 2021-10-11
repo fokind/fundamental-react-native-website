@@ -1,0 +1,60 @@
+---
+id: formitem
+title: FormItem
+---
+
+```jsx
+import { FormItem } from "fundamental-react-native";
+```
+
+## Examples
+
+### Primary
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { FormInput, FormItem, FormLabel, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <FormItem>
+        <FormLabel>Default Input</FormLabel>
+        <FormInput placeholder="Field placeholder text" />
+      </FormItem>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+### Inline
+
+```SnackPlayer name=Button&dependencies=fundamental-react-native@0.0.3
+import React from 'react';
+import { View } from 'react-native';
+import { FormInput, FormItem, FormLabel, ThemeProvider, theme } from 'fundamental-react-native';
+
+const App = () => (
+  <ThemeProvider value={theme}>
+    <View style={{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+      <FormItem isHorizontal>
+        <FormLabel>Default Input</FormLabel>
+        <FormInput placeholder="Field placeholder text" />
+      </FormItem>
+    </View>
+  </ThemeProvider>
+);
+
+export default App;
+```
