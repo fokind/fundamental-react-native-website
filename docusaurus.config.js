@@ -9,14 +9,14 @@ const config = {
   title: "Fundamental React Native",
   tagline:
     "Library of React Native components based on SAP Fundamental Styles.",
-  url: "https://fokind.github.io/react-native-fundamental/",
-  baseUrl: "/",
+  url: "https://fokind.github.io",
+  baseUrl: "/fundamental-react-native/",
   clientModules: [require.resolve("./snackPlayerInitializer.js")],
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "fokind", // Usually your GitHub org/user name.
-  projectName: "fundamental-react-native", // Usually your repo name.
+  organizationName: "fokind",
+  projectName: "fundamental-react-native",
   presets: [
     [
       "@docusaurus/preset-classic",
